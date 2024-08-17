@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+
+.main{
+    padding: 30px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main > button{
+    width: max-content;
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: 500;
+    align-self: center;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.main > button:hover{
+    transition: all 0.3s ease;
+    background-color: rgb(220,220,220);
+}
+
+.cards{
+    justify-content: center;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill,350px);
+}
+
+.card{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+    font-size: 20px;
+}
+
+dialog{
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: rgb(248, 248, 248);
+}
+
+dialog form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type='text'], input[type='number']{
+    width: 300px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    border: 1px solid black;
+    background-color: white;
+}
+
+input.selected:focus-visible{
+    outline: none;
+    border: 1px solid black;
+}
+
+
+
+input.selected:invalid{
+    border: 1px solid #E32636;
+}
+
+dialog input#read{
+    width: min-content;
+}
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    padding: 15px 30px;
+    width: 40%;
+    border-radius: 7px;
+    border: none;
+    font-size: 17px;
+    transition: background-color 0.5s ease, color 0.2s ease;
+}
+
+button[type='submit']:hover{
+    background-color: #17B169;
+    color: white;
+}
+
+button.cancel:hover{
+    background-color: #E32636;
+    color: white;
+}
+
+::backdrop{
+    background: rgb(0 0 0 / 0.5);
+}
+
+p{
+    margin: 0;
+}
+
+.card button{
+    width: 80%;
+    padding: 15px 0;
+    font-size: inherit;
+    border-radius: 7px;
+    border: none;
+    color: white;
+}
+
+button#read{
+    background-color: #ff2c3d;
+    transition: all 0.3s ease;
+}
+
+button#read:hover{
+    background-color: #E32636;
+}
+
+button#read.read{
+    background-color: #17B169;
+}
+
+button#read.read:hover{
+    background-color: #16a160;
+}
+
+button#remove{
+    background-color: rgb(220, 220, 220);
+    color: black;
+    transition: all 0.3s ease;
+}
+
+button#remove:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+
