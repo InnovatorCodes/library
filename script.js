@@ -5,6 +5,7 @@ const dialog=document.querySelector('dialog');
 const form=document.querySelector('form');
 const cancelbtn=document.querySelector('.cancel');
 const submitbtn=document.querySelector('.submit');
+const cards=document.querySelector('.cards');
 addbtn.addEventListener('click',()=>{
     dialog.showModal();
 })
@@ -80,6 +81,10 @@ document.querySelector('dialog form').addEventListener('submit',(event)=>{
     const remove=document.createElement('button');
     remove.textContent='Remove';
     remove.setAttribute('id','remove');
+    remove.addEventListener('click',()=>{
+        let index=event.target.dataset.index;
+        cards.removeChild(document.querySelectorAll('.card')[index]);
+    })
     div.appendChild(readbtn);
     div.appendChild(remove);
     div.dataset.index=mylib.length-1;
