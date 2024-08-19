@@ -103,7 +103,7 @@ input.selected:focus-visible{
 
 
 input.selected:invalid{
-    border: 1px solid var(--redcolour);
+    border: 1px solid var(--redcolourlight);
 }
 
 dialog input#read{
@@ -131,7 +131,7 @@ button[type='submit']:hover{
 }
 
 button.cancel:hover{
-    background-color: var(--redcolour);
+    background-color: var(--redcolourlight);
     color: white;
 }
 

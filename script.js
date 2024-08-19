@@ -2,7 +2,7 @@ let mylib=[];
 
 const addbtn=document.querySelector('#add');
 const dialog=document.querySelector('dialog');
-const form=document.querySelector('form');
+const form=document.querySelector('dialog form');
 const cancelbtn=document.querySelector('.cancel');
 const submitbtn=document.querySelector('.submit');
 const cards=document.querySelector('.cards');
@@ -22,9 +22,11 @@ cancelbtn.addEventListener('click',()=>{
 
 form.addEventListener('keydown',(event)=>{
     if(event.key==='Enter'){
+        document.querySelectorAll('input').forEach((element)=>{
+            element.classList.add('selected');
+        })
         event.preventDefault();
-        const newevent=new Event('click');
-        submitbtn.dispatchEvent(newevent);
+        form.requestSubmit();
     }
 })
 
