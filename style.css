@@ -1,3 +1,11 @@
+:root{
+    --redcolourlight: #d90429;
+    --redcolourdark: #ca0f2e;
+    --greencolourlight: #17B169;
+    --greencolourdark:  #16a160; 
+}
+
+
 *{
     box-sizing: border-box;
     font-family: 'Roboto',sans-serif;
@@ -95,7 +103,7 @@ input.selected:focus-visible{
 
 
 input.selected:invalid{
-    border: 1px solid #E32636;
+    border: 1px solid var(--redcolour);
 }
 
 dialog input#read{
@@ -123,7 +131,7 @@ button[type='submit']:hover{
 }
 
 button.cancel:hover{
-    background-color: #E32636;
+    background-color: var(--redcolour);
     color: white;
 }
 
@@ -145,20 +153,20 @@ p{
 }
 
 button#read{
-    background-color: #ff2c3d;
+    background-color: var(--redcolourlight);
     transition: all 0.3s ease;
 }
 
 button#read:hover{
-    background-color: #E32636;
+    background-color: var(--redcolourdark);
 }
 
 button#read.read{
-    background-color: #17B169;
+    background-color: var(--greencolourlight);
 }
 
 button#read.read:hover{
-    background-color: #16a160;
+    background-color: var(--greencolourdark);
 }
 
 button#remove{

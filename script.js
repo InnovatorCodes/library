@@ -1,4 +1,4 @@
-const mylib=[];
+let mylib=[];
 
 const addbtn=document.querySelector('#add');
 const dialog=document.querySelector('dialog');
@@ -81,9 +81,12 @@ document.querySelector('dialog form').addEventListener('submit',(event)=>{
     const remove=document.createElement('button');
     remove.textContent='Remove';
     remove.setAttribute('id','remove');
-    remove.addEventListener('click',()=>{
-        let index=event.target.dataset.index;
-        cards.removeChild(document.querySelectorAll('.card')[index]);
+    remove.addEventListener('click',(event)=>{
+        let index=event.target.parentNode.dataset.index;
+        let child=event.target.parentNode;
+        mylib.splice(index,1);
+        cards.removeChild(child);
+        console.log(mylib);
     })
     div.appendChild(readbtn);
     div.appendChild(remove);
