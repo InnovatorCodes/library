@@ -73,8 +73,10 @@ document.querySelector('dialog form').addEventListener('submit',(event)=>{
     } 
     else readbtn.textContent='Not Read';
     readbtn.setAttribute('id','read');
-    readbtn.addEventListener('click',()=>{
+    readbtn.addEventListener('click',(event)=>{
         readbtn.classList.toggle('read');
+        let index=event.target.parentNode.dataset.index;
+        mylib[index].read=!mylib[index].read;
         if(readbtn.classList.contains('read')) readbtn.textContent='Read';
         else readbtn.textContent='Not Read';
     })
