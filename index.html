@@ -15,23 +15,23 @@
     <div class="header">Library</div>
     <div class="main">
         <button id="add">+ Add New Book</button>
-        <dialog>
+        <dialog class="add">
             <form action="">
                 <h2>Add New Book</h2>
                 <input type="text" placeholder="Title" id="title" required>
                 <input type="text" placeholder="Author" id="author" required>
                 <input type="number" placeholder="Pages" id="pages" required>
                 <div><input type="checkbox" name="read" id="read"><label for="read">I have read this book</label></div>
-                <div class="buttons"><button class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
+                <div class="buttons"><button type="button" class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
             </form>
         </dialog>
         <dialog class="edit">
             <form action="">
-                <h2>Add New Book</h2>
-                <input type="text" id="edittitle" required>
-                <input type="text" id="editauthor" required>
-                <input type="number" id="editpages" required>
-                <div class="buttons"><button class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
+                <h2>Edit Existing Book</h2>
+                <input type="text" id="edittitle" class="selected" required>
+                <input type="text" id="editauthor" class="selected" required>
+                <input type="number" id="editpages" class="selected" required>
+                <div class="buttons"><button type="button" class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
             </form>
         </dialog>
         <div class="cards">
