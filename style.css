@@ -113,6 +113,10 @@ dialog input#read{
     width: min-content;
 }
 
+button{
+    cursor: pointer;
+}
+
 .buttons{
     display: flex;
     width: 100%;
@@ -187,5 +191,11 @@ img{
     background-color: var(--greybgcolor);
     width: 30px;
     align-self: flex-end;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+img:hover{
+    opacity: 100%;
 }
 
