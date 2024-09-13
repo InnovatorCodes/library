@@ -3,6 +3,7 @@
     --redcolourdark: #ca0f2e;
     --greencolourlight: #17B169;
     --greencolourdark:  #16a160; 
+    --greybgcolor: rgb(50, 50, 50);
 }
 
 
@@ -64,7 +65,7 @@ body{
 
 .card{
     border: 2px solid white;
-    background-color: rgb(50, 50, 50);
+    background-color: var(--greybgcolor);
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -184,4 +185,9 @@ button#remove:hover{
     background-color: rgb(220, 220, 220);
 }
 
+img{
+    background-color: var(--greybgcolor);
+    width: 30px;
+    align-self: flex-end;
+}
 

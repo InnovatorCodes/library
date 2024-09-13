@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -23,7 +23,15 @@
                 <input type="number" placeholder="Pages" id="pages" required>
                 <div><input type="checkbox" name="read" id="read"><label for="read">I have read this book</label></div>
                 <div class="buttons"><button class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
-                <div class="result"></div>
+            </form>
+        </dialog>
+        <dialog class="edit">
+            <form action="">
+                <h2>Add New Book</h2>
+                <input type="text" id="edittitle" required>
+                <input type="text" id="editauthor" required>
+                <input type="number" id="editpages" required>
+                <div class="buttons"><button class="cancel">Cancel</button><button type="submit" class="submit">Submit</button></div>
             </form>
         </dialog>
         <div class="cards">
